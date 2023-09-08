@@ -1,0 +1,56 @@
+@keyframes floating {
+    from {
+        transform: translate(0, 0px);
+    }
+
+    65% {
+        transform: translate(0, 15px);
+    }
+
+    to {
+        transform: translate(0, -0px);
+    }
+}
+body {
+    background-color: #080808;
+    color: #fff;
+}
+
+#area {
+    background-color: #000;
+    width: 100%;
+    height: calc(100vh - 280px);
+    position: relative;
+}
+
+#space {
+
+}
+
+#area ul {
+    width: 100%;
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#area ul li {
+    display: inline-flex;
+    padding: 3vw;
+    border: 1px solid #0f0;
+}
+#object {
+    /* animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #0f0;
+    background-color: #0f0;
+}
+
