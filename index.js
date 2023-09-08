@@ -6,6 +6,14 @@ const heightBowndary = -frame.offsetHeight + objectHeight;
 const mainObject = document.querySelector('#object');
 const pos = { x: 0, y: 0 };
 
+function isMobile () {
+    if (screen.width <= 480) {
+        return true;
+    }
+    return false;
+}
+
+
 var joystick = new JoyStick({
     radius: 60,
     x: window.innerWidth / 2,
@@ -13,7 +21,7 @@ var joystick = new JoyStick({
     // x: widthBowndary / 5,
     // y: (heightBowndary * -1) - 100,
     inner_radius: 40,
-    mouse_support: isMobile ? false : true,
+    mouse_support: isMobile() ? false : true,
 });
 
 
@@ -55,7 +63,7 @@ var joystick = new JoyStick({
 const keyDict = {};
 const Player = {
     el: document.querySelector("#object"),
-    x: 0,
+    x: 100,
     y: 0,
     speed: 6,
     move() {
